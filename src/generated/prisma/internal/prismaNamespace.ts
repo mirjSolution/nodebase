@@ -879,7 +879,7 @@ export const WorkflowScalarFieldEnum = {
   id: 'id',
   name: 'name',
   cretedAt: 'cretedAt',
-  updated: 'updated',
+  updatedAt: 'updatedAt',
   userId: 'userId'
 } as const
 

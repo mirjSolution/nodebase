@@ -28,7 +28,7 @@ export type WorkflowMinAggregateOutputType = {
   id: string | null
   name: string | null
   cretedAt: Date | null
-  updated: Date | null
+  updatedAt: Date | null
   userId: string | null
 }
 
@@ -36,7 +36,7 @@ export type WorkflowMaxAggregateOutputType = {
   id: string | null
   name: string | null
   cretedAt: Date | null
-  updated: Date | null
+  updatedAt: Date | null
   userId: string | null
 }
 
@@ -44,7 +44,7 @@ export type WorkflowCountAggregateOutputType = {
   id: number
   name: number
   cretedAt: number
-  updated: number
+  updatedAt: number
   userId: number
   _all: number
 }
@@ -54,7 +54,7 @@ export type WorkflowMinAggregateInputType = {
   id?: true
   name?: true
   cretedAt?: true
-  updated?: true
+  updatedAt?: true
   userId?: true
 }
 
@@ -62,7 +62,7 @@ export type WorkflowMaxAggregateInputType = {
   id?: true
   name?: true
   cretedAt?: true
-  updated?: true
+  updatedAt?: true
   userId?: true
 }
 
@@ -70,7 +70,7 @@ export type WorkflowCountAggregateInputType = {
   id?: true
   name?: true
   cretedAt?: true
-  updated?: true
+  updatedAt?: true
   userId?: true
   _all?: true
 }
@@ -151,7 +151,7 @@ export type WorkflowGroupByOutputType = {
   id: string
   name: string
   cretedAt: Date
-  updated: Date
+  updatedAt: Date
   userId: string
   _count: WorkflowCountAggregateOutputType | null
   _min: WorkflowMinAggregateOutputType | null
@@ -180,7 +180,7 @@ export type WorkflowWhereInput = {
   id?: Prisma.StringFilter<"Workflow"> | string
   name?: Prisma.StringFilter<"Workflow"> | string
   cretedAt?: Prisma.DateTimeFilter<"Workflow"> | Date | string
-  updated?: Prisma.DateTimeFilter<"Workflow"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"Workflow"> | Date | string
   userId?: Prisma.StringFilter<"Workflow"> | string
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }
@@ -189,7 +189,7 @@ export type WorkflowOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   cretedAt?: Prisma.SortOrder
-  updated?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   user?: Prisma.UserOrderByWithRelationInput
 }
@@ -201,7 +201,7 @@ export type WorkflowWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.WorkflowWhereInput | Prisma.WorkflowWhereInput[]
   name?: Prisma.StringFilter<"Workflow"> | string
   cretedAt?: Prisma.DateTimeFilter<"Workflow"> | Date | string
-  updated?: Prisma.DateTimeFilter<"Workflow"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"Workflow"> | Date | string
   userId?: Prisma.StringFilter<"Workflow"> | string
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }, "id">
@@ -210,7 +210,7 @@ export type WorkflowOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   cretedAt?: Prisma.SortOrder
-  updated?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   _count?: Prisma.WorkflowCountOrderByAggregateInput
   _max?: Prisma.WorkflowMaxOrderByAggregateInput
@@ -224,7 +224,7 @@ export type WorkflowScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"Workflow"> | string
   name?: Prisma.StringWithAggregatesFilter<"Workflow"> | string
   cretedAt?: Prisma.DateTimeWithAggregatesFilter<"Workflow"> | Date | string
-  updated?: Prisma.DateTimeWithAggregatesFilter<"Workflow"> | Date | string
+  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Workflow"> | Date | string
   userId?: Prisma.StringWithAggregatesFilter<"Workflow"> | string
 }
 
@@ -232,7 +232,7 @@ export type WorkflowCreateInput = {
   id?: string
   name: string
   cretedAt?: Date | string
-  updated?: Date | string
+  updatedAt?: Date | string
   user: Prisma.UserCreateNestedOneWithoutWorkflowsInput
 }
 
@@ -240,7 +240,7 @@ export type WorkflowUncheckedCreateInput = {
   id?: string
   name: string
   cretedAt?: Date | string
-  updated?: Date | string
+  updatedAt?: Date | string
   userId: string
 }
 
@@ -248,7 +248,7 @@ export type WorkflowUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   user?: Prisma.UserUpdateOneRequiredWithoutWorkflowsNestedInput
 }
 
@@ -256,7 +256,7 @@ export type WorkflowUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
@@ -264,7 +264,7 @@ export type WorkflowCreateManyInput = {
   id?: string
   name: string
   cretedAt?: Date | string
-  updated?: Date | string
+  updatedAt?: Date | string
   userId: string
 }
 
@@ -272,14 +272,14 @@ export type WorkflowUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type WorkflowUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
@@ -297,7 +297,7 @@ export type WorkflowCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   cretedAt?: Prisma.SortOrder
-  updated?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
 }
 
@@ -305,7 +305,7 @@ export type WorkflowMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   cretedAt?: Prisma.SortOrder
-  updated?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
 }
 
@@ -313,7 +313,7 @@ export type WorkflowMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   cretedAt?: Prisma.SortOrder
-  updated?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
 }
 
@@ -363,14 +363,14 @@ export type WorkflowCreateWithoutUserInput = {
   id?: string
   name: string
   cretedAt?: Date | string
-  updated?: Date | string
+  updatedAt?: Date | string
 }
 
 export type WorkflowUncheckedCreateWithoutUserInput = {
   id?: string
   name: string
   cretedAt?: Date | string
-  updated?: Date | string
+  updatedAt?: Date | string
 }
 
 export type WorkflowCreateOrConnectWithoutUserInput = {
@@ -406,7 +406,7 @@ export type WorkflowScalarWhereInput = {
   id?: Prisma.StringFilter<"Workflow"> | string
   name?: Prisma.StringFilter<"Workflow"> | string
   cretedAt?: Prisma.DateTimeFilter<"Workflow"> | Date | string
-  updated?: Prisma.DateTimeFilter<"Workflow"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"Workflow"> | Date | string
   userId?: Prisma.StringFilter<"Workflow"> | string
 }
 
@@ -414,28 +414,28 @@ export type WorkflowCreateManyUserInput = {
   id?: string
   name: string
   cretedAt?: Date | string
-  updated?: Date | string
+  updatedAt?: Date | string
 }
 
 export type WorkflowUpdateWithoutUserInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type WorkflowUncheckedUpdateWithoutUserInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type WorkflowUncheckedUpdateManyWithoutUserInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   cretedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updated?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -444,7 +444,7 @@ export type WorkflowSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   id?: boolean
   name?: boolean
   cretedAt?: boolean
-  updated?: boolean
+  updatedAt?: boolean
   userId?: boolean
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["workflow"]>
@@ -453,7 +453,7 @@ export type WorkflowSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   id?: boolean
   name?: boolean
   cretedAt?: boolean
-  updated?: boolean
+  updatedAt?: boolean
   userId?: boolean
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["workflow"]>
@@ -462,7 +462,7 @@ export type WorkflowSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
   id?: boolean
   name?: boolean
   cretedAt?: boolean
-  updated?: boolean
+  updatedAt?: boolean
   userId?: boolean
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["workflow"]>
@@ -471,11 +471,11 @@ export type WorkflowSelectScalar = {
   id?: boolean
   name?: boolean
   cretedAt?: boolean
-  updated?: boolean
+  updatedAt?: boolean
   userId?: boolean
 }
 
-export type WorkflowOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "cretedAt" | "updated" | "userId", ExtArgs["result"]["workflow"]>
+export type WorkflowOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "cretedAt" | "updatedAt" | "userId", ExtArgs["result"]["workflow"]>
 export type WorkflowInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
@@ -495,7 +495,7 @@ export type $WorkflowPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     id: string
     name: string
     cretedAt: Date
-    updated: Date
+    updatedAt: Date
     userId: string
   }, ExtArgs["result"]["workflow"]>
   composites: {}
@@ -924,7 +924,7 @@ export interface WorkflowFieldRefs {
   readonly id: Prisma.FieldRef<"Workflow", 'String'>
   readonly name: Prisma.FieldRef<"Workflow", 'String'>
   readonly cretedAt: Prisma.FieldRef<"Workflow", 'DateTime'>
-  readonly updated: Prisma.FieldRef<"Workflow", 'DateTime'>
+  readonly updatedAt: Prisma.FieldRef<"Workflow", 'DateTime'>
   readonly userId: Prisma.FieldRef<"Workflow", 'String'>
 }
     
