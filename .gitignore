@@ -42,6 +42,6 @@ next-env.d.ts
 
 /app/generated/prisma
 chapter-prompt-summarizer.txt
-*.md
+/docs/commits
 # Sentry Config File
 .env.sentry-build-plugin
